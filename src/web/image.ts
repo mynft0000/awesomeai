@@ -25,19 +25,43 @@ export default [
     title: 'craiyon'
   },
   {
-    url: 'https://www.fotor.com/',
-    logo: 'https://static.fotor.com/app/minitools/aiimage/favicon_en.png',
-    title: 'fotor'
-  },
-  {
     url: 'https://you.com/search?q=%40draw+a+swimming+cat',
     logo: 'https://you.com/favicon/apple-touch-icon-57x57.png',
     title: 'You Image'
   },
   {
+    url: 'https://replicate.com/cjwbw/waifu-diffusion',
+    logo: 'https://replicate.com/static/favicon.c3e4e1c1e57e.ico',
+    title: 'waifu-diffusion'
+  },
+  {
+    url: 'https://replicate.com/laion-ai/erlich',
+    logo: 'https://replicate.com/static/favicon.c3e4e1c1e57e.ico',
+    title: 'erlich'
+  },
+  {
+    url: 'https://replicate.com/borisdayma/dalle-mini',
+    logo: 'https://www.craiyon.com/favicon-32x32.png',
+    title: 'dalle-mini'
+  },
+  {
     url: 'https://beta.dreamstudio.ai/',
     logo: 'https://beta.dreamstudio.ai/favicon.svg',
     title: 'DreamStudio'
-  }
-  
+  },
+  {
+    url: 'https://replicate.com/prompthero/openjourney',
+    logo: 'https://prompthero.com/favicon/favicon-32x32.png',
+    title: 'openjourney'
+  },
+  {
+    url: 'https://gencraft.com/',
+    logo: 'https://gencraft.com/favicon.ico',
+    title: 'gencraft'
+  },
+  {
+    url: 'https://hotpot.ai/',
+    logo: 'https://hotpot.ai/favicon.ico',
+    title: 'hotpot'
+  },
 ];

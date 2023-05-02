@@ -8,7 +8,7 @@ import list, { type Category } from './list';
 const WIDTH = 200;
 const PADDING = 16;
 const MARGIN = 8;
-const percent = 0.8;
+const percent = 1;
 
 function getList() {
   const columns = Math.max(1, Math.floor(window.innerWidth * percent / (WIDTH + MARGIN * 2 + PADDING * 2)));
@@ -33,7 +33,7 @@ function getList() {
   return columnsList;
 }
 
-let timer: number;
+let timer: any;
 
 const App = () => {
   const [list, setList] = useState(getList());
@@ -49,6 +49,9 @@ const App = () => {
 
   return <>
     <Global styles={css`
+      body {
+        margin: 0;
+      }
       a {
         text-decoration: none;
         color: #333;
@@ -58,15 +61,44 @@ const App = () => {
       }
     `} />
     <div css={css`
-      padding: 12px 0 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 12px;
       color: #333;
+      background-color: #eee;
+      box-shadow: rgba(0,0,0,0.2) 10px 10px 20px;
       font-weight: bold;
       font-size: 30px;
       text-align: center;
       font-style: italic;
-      text-decoration: underline;
     `}>
-      <a href="/">awesomeai.website</a>
+      <a css={css`
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      `} href="/">
+        <img css={css`
+          border-radius: 60px;
+          width: 60px;
+          height: 60px;
+        `} src={require('./assets/icon.png')} />
+        <div>awesomeAI.website</div>
+      </a>
+      <a css={css`
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        text-decoration: none;
+      `} href="https://twitter.com/awesome______ai" target="_blank">
+        <img css={css`
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+        `} src={require('./assets/twitter.svg')} />
+        twitter
+      </a>
     </div>
     <div css={css`
       display: flex;
@@ -118,23 +150,6 @@ const App = () => {
           </div>)
         }
       </div>
-    </div>
-    <div css={css`
-      text-align: center;
-      margin: 60px 0 30px;
-    `}>
-      <a css={css`
-        background: url(https://cdn.you.com/img/images/footer/logo_round_twitter.svg) left center no-repeat;
-        background-size: 16px 16px;
-        padding-left: 22px;
-        margin-right: 8px;
-      `} href="" target="_blank">twitter</a>
-      <a css={css`
-        background: url(https://cdn.you.com/img/images/footer/logo_round_twitter.svg) left center no-repeat;
-        background-size: 16px 16px;
-        padding-left: 22px;
-        margin-right: 8px;
-      `} href="" target="_blank">about</a>
     </div>
   </>;
 }
